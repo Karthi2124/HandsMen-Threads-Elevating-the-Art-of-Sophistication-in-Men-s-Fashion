@@ -1,4 +1,4 @@
-trigger StockDeductionTrigger on HandsMen_Order__c (after insert, after update) {
+    trigger StockDeductionTrigger on HandsMen_Order__c (after insert, after update) {
     Set<Id> productIds = new Set<Id>();
  
     for (HandsMen_Order__c order : Trigger.new) {
